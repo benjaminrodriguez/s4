@@ -1,0 +1,29 @@
+{% include 'header.html' %}
+
+    <main role="main" class="container">
+        {% if username %}
+        <h1> Bienvenue {{username}} </h1>
+        {% else %}
+        <h1> Bienvenue invité ! </h1>
+        {% endif %}
+      <div class="container">
+        {% if username %}
+        <li>
+            <a href="forum.html">Forum</a>
+        </li>
+        {% else %}
+        <li>
+            <a href="login.html">S'authentifier</a>
+        </li>
+        <li>
+            <a href="register.html">Créer un compte</a>
+        </li>
+        {% endif %}
+      </div>
+      <div class="starter-template">
+        <h1>Ma super appli v0.1 !</h1>
+        <p> Toujours en développement, mais bientôt un GAFA ! </p>
+      </div>
+    </main>
+
+{% include 'footer.html' %}
